@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sentiment Analysis of Dark Patterns</title>
+<style>
+.sentiment-analysis {
+    text-align: center;
+    padding: 20px;
+}
+
+.dark-pattern-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.dark-pattern {
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.dark-pattern h3 {
+    color: #333;
+}
+
+.dark-pattern p {
+    color: #666;
+}
+
+.dark-pattern button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-pattern button:hover {
+    background-color: #0056b3;
+}
+
+#details-container {
+    margin-top: 50px;
+    display: none;
+}
+</style>
+</head>
+<body>
+<div class="sentiment-analysis">
+    <h2>Sentiment Analysis of Dark Patterns</h2>
+    <div class="dark-pattern-container">
+        <div class="dark-pattern pressure">
+            <h3>Feeling of Pressure</h3>
+            <p>This dark pattern creates a sense of urgency or pressure to take immediate action.</p>
+            <button onclick="showDetails('pressure')">Learn More</button>
+        </div>
+        <div class="dark-pattern fear">
+            <h3>Feeling of Fear</h3>
+            <p>This dark pattern instills fear or anxiety to manipulate user behavior.</p>
+            <button onclick="showDetails('fear')">Learn More</button>
+        </div>
+        <div class="dark-pattern guilt">
+            <h3>Feeling of Guilt</h3>
+            <p>This dark pattern induces guilt to compel users to comply with certain actions.</p>
+            <button onclick="showDetails('guilt')">Learn More</button>
+        </div>
+    </div>
+    <div id="details-container"></div>
+</div>
+<script>
+function showDetails(sentiment) {
+    let detailsContainer = document.getElementById('details-container');
+    detailsContainer.style.display = 'block';
+    let details = '';
+    switch (sentiment) {
+        case 'pressure':
+            details = "<p>Pressure-based dark patterns create a sense of urgency or scarcity to manipulate users into making quick decisions, often leading to regret.</p>";
+            break;
+        case 'fear':
+            details = "<p>Fear-inducing dark patterns leverage users' anxieties or fears to push them towards a specific action or decision, often exploiting personal insecurities.</p>";
+            break;
+        case 'guilt':
+            details = "<p>Guilt-driven dark patterns evoke feelings of shame or remorse in users to coerce compliance with certain actions or behaviors, often leading to emotional manipulation.</p>";
+            break;
+        default:
+            details = "<p>No details available.</p>";
+            break;
+    }
+    detailsContainer.innerHTML = details;
+}
+</script>
+</body>
+</html>

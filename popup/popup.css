@@ -1,0 +1,10 @@
+.heading-container {
+    display: flex;
+    align-items: center;
+}
+
+.count-container {
+    background-color: rgb(255, 251, 251); /* Example background color */
+    padding: 5px 10px; /* Example padding */
+    margin-left: auto; /* Push the container to the right */
+}

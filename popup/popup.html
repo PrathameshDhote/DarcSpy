@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+    <style>
+         @import url('https://fonts.cdnfonts.com/css/product-sans');
+        body {
+            font-family: 'Product Sans', sans-serif;
+            margin: 0;
+            padding: 8px;
+            width: 300px;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 0.85em;
+            overflow: hidden; /* to ensure the video covers the whole page */
+        }
+
+        #gif-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: ;
+            height: auto;
+            z-index: -1; /* to ensure the GIF stays in the background */
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: rgb(248, 244, 244);
+            }
+        }
+    </style>
+    <script type="module" src="popup.js"></script>
+</head>
+
+<body>
+    <img src="LCPT.gif" id="gif-background" alt="Background">
+
+    <div class="main-content">
+        <h1>DarcSpy</h1>
+      </div>
+    <extension-popup></extension-popup>
+    <style>
+         body {
+            font-family: 'Product Sans', sans-serif;
+            background-color: #0b3610;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #171c3e;
+            border-radius: 5px;
+            opacity: 0.75;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        canvas {
+            margin: 20px auto;
+            display: block;
+        }
+        .sentiment-analysis {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .dark-pattern-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        
+        .dark-pattern {
+            width: 30%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(245, 247, 249, 0.2);
+            margin-bottom: 20px;
+        }
+        
+        .dark-pattern h3 {
+            color: #53bd22;
+        }
+        
+        .dark-pattern p {
+            color: #f4ecec;
+        }
+        
+        .dark-pattern button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .dark-pattern button:hover {
+            background-color: #0056b3;
+        }
+        
+        #details-container {
+            margin-top: 50px;
+            display: none;
+        }
+        </style>
+    <div class="sentiment-analysis">
+        <h2>Sentiment Analysis of Dark Patterns</h2>
+        <div class="dark-pattern-container">
+            <div class="dark-pattern pressure">
+                <h3>Feeling of Pressure</h3>
+            </div>
+            <div class="dark-pattern fear">
+                <h3>Feeling of Fear</h3>
+                
+            </div>
+            <div class="dark-pattern guilt">
+                <h3>Feeling of Guilt</h3>
+                
+            </div>
+        </div>
+        <div id="details-container"></div>
+    </div>
+    <div class="container">
+        <h1>Dark Pattern Reports</h1>
+        <canvas id="patternChart"></canvas>
+        <h2>Classification Report</h2>
+        <img src="Classfication.jpg"  alt="Background" height="300px" width="300px"> 
+        <p>For Detailed Information Related to Classification</p>
+        <a href="Classification.html">View Classification</a>
+        <h2>Scaling Report</h2>
+        <img src="Scale.jpg"  alt="Background" height="300px" width="250px"> 
+    </div>
+    <p>For More info Visit</p>
+    <a href="second.html" target="blank"> Detailed Analysis</a>
+</body>
+
+</html>
